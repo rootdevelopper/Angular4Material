@@ -1,0 +1,65 @@
+
+<!--<nav class="navbar navbar-toggleable-md navbar-inverse bg-warning">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Anelto</a>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}"><a class="nav-link" [routerLink]="['/']">Home <span class="sr-only">(current)</span></a></li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="http://example.com" id="otherMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Other</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown01">
+            <a class="dropdown-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}" [routerLink]="['/service']">Service</a>
+            <a class="dropdown-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}" [routerLink]="['/fota']">FOTA</a>
+            <a class="dropdown-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}" [routerLink]="['/company']">Company</a>
+            <a class="dropdown-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}" [routerLink]="['/admin']">Admin</a>
+          </div>
+        </li>    
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="MenuMain" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <a class="dropdown-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}" [routerLink]="['/']">Home</a>
+          <a class="dropdown-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}" [routerLink]="['/builder']">Campaign Builder</a>
+          <a class="dropdown-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}" [routerLink]="['/dealer']">Dealer</a>
+          <a class="dropdown-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}" [routerLink]="['/dashboard']">Dashboard</a>
+          <a class="dropdown-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}" [routerLink]="['/devices']">Devices</a>
+          <a class="dropdown-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}" [routerLink]="['/callcenter']">Call Center</a>
+          <a class="dropdown-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}" [routerLink]="['/newactivation']">New Activation</a>
+          <a class="dropdown-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}" [routerLink]="['/inventory']">Inventory management</a>
+        </div>
+      </li>
+      <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}"><a class="nav-link"   [routerLink]="['/profile']">Profile</a></li>
+      <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}"><a class="nav-link"   [routerLink]="['/support']">Support</a></li>
+      <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}"><a class="nav-link"   [routerLink]="['/login']">Login</a></li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<br/> -->
+<div class="alert-info">
+    <button mat-button [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}" [routerLink]="['/']">Home</button>
+    <button mat-button [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}" [routerLink]="['/login']"> Login</button>
+    <button mat-button (click)="onlogoutClick()" href="#"> Logout </button>
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu" color="accent"> 
+      <button mat-menu-item *ngIf-"authe" [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}" [routerLink]="['/profile']">Profile</button>
+      <button mat-menu-item [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}" [routerLink]="['/dashboard']">Dashboard </button>
+    </mat-menu>
+    <mat-menu #rootMenu="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="subMenu">Admin</button>
+      <button mat-menu-item>System settings</button>
+    </mat-menu>
+    <mat-menu #subMenu="matMenu">
+      <button mat-menu-item mat-menu-item [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}" [routerLink]="['/register']"> Register New user</button>
+      <button mat-menu-item>Restart</button>
+      <button mat-menu-item>Hibernate</button>
+    </mat-menu>
+    <button mat-icon-button [matMenuTriggerFor]="rootMenu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+</div>

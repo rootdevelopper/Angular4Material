@@ -1,0 +1,23 @@
+{
+  "name": "ticketsys",
+  "version": "1.0.0",
+  "description": "Ticket system for Systems issues",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "eslint": "^4.9.0",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.0",
+    "mongoose": "*",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.0"
+  },
+  "author": "rootdevelopper",
+  "license": "ISC"
+}

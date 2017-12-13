@@ -1,0 +1,23 @@
+
+<div class="alert-info">
+    <button mat-button *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}" [routerLink]="['/']">Home</button>
+    <button mat-button *ngIf="authService.loggedIn() == false" [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}" [routerLink]="['/login']"> Login</button>
+    <button mat-button *ngIf="authService.loggedIn()" (click)="onlogoutClick()" href="#"> Logout </button>
+    <button *ngIf="authService.loggedIn()" mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu  #menu="matMenu" color="accent"> 
+      <button mat-menu-item *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}" [routerLink]="['/profile']">Profile</button>
+      <button mat-menu-item *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}" [routerLink]="['/dashboard']">Dashboard </button>
+    </mat-menu>
+    <mat-menu #rootMenu="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="subMenu">Admin</button>
+      <button mat-menu-item>System settings</button>
+    </mat-menu>
+    <mat-menu #subMenu="matMenu">
+      <button mat-menu-item mat-menu-item *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}" [routerLink]="['/register']"> Register New user</button>
+      <button mat-menu-item>Restart</button>
+      <button mat-menu-item>Hibernate</button>
+    </mat-menu>
+    <button *ngIf="authService.loggedIn()" mat-icon-button [matMenuTriggerFor]="rootMenu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+</div>

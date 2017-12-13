@@ -1,0 +1,6 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* Bootstrap hand picked colors */
+
+.alert{padding:0.75rem 1.25rem;margin-bottom:1rem;border:1px solid transparent;border-radius:0.25rem}.alert-heading{color:inherit}.alert-link{font-weight:bold}.alert-dismissible .close{position:relative;top:-0.75rem;right:-1.25rem;padding:0.75rem 1.25rem;color:inherit}.alert-success{background-color:#18BC9C;border-color:#15a589;color:#fff}.alert-success hr{border-top-color:#128f76}.alert-success .alert-link{color:#e6e6e6}.alert-info{background-color:#3498DB;border-color:#2386c8;color:#fff}.alert-info hr{border-top-color:#2077b2}.alert-info .alert-link{color:#e6e6e6}.alert-warning{background-color:#F39C12;border-color:#e08e0b;color:#fff}.alert-warning hr{border-top-color:#c87f0a}.alert-warning .alert-link{color:#e6e6e6}.alert-danger{background-color:#E74C3C;border-color:#e43725;color:#fff}.alert-danger hr{border-top-color:#d62c1a}.alert-danger

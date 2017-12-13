@@ -1,0 +1,17 @@
+{
+  "name": "ticketsys",
+  "version": "1.0.0",
+  "description": "Ticket system for Systems issues",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "express":"^4.16.2",
+    "mongoose":"^4.12.4",
+    "bcrypt"
+  },
+  "author": "rootdevelopper",
+  "license": "ISC"
+}
